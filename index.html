@@ -1,432 +1,916 @@
-<style type="text/css">
-<!-- /*<style id='page-skin-1' type='text/css'><!--
-*/
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-a{text-decoration:none;transition:all .35s ease-in-out;-moz-transition:all .35s ease-in-out;-webkit-transition:all .35s ease-in-out;-o-transition:all .35s ease-in-out;cursor:pointer;outline:0!important;color:#eee}
-.event_title_wrapper{float:right;width:20%}
-.commenter{padding-left:10px;display:inline-block}
-.chanels-fix{text-align:right;padding-right:10px;display:inline-block}
-.chanels-commenter{padding-left:15px;display:inline-block;text-align:right}
-.chanels-commenter a{color:rgb(60,75,123)}
-@font-face{font-family:neo;src:url('admin/fonts/Greta_Arabic_Regular.eot');src:url('admin/fonts/Greta_Arabic_Regular.eot?#iefix') format('embedded-opentype'),url('admin/fonts/Greta_Arabic_Regular.woff') format('woff'),url('admin/fonts/Greta_Arabic_Regular.otf') format('opentype')}
-.font1{font-family:'font1'!important}
-.font2{font-family:'font2'!important}
-.font3{font-family:'font3'!important}
-.font4{font-family:'font4'!important}
-.font5{font-family:'font5'!important}
-.font6{font-family:'font6'!important}
-.font7{font-family:'font7'!important}
-.font8{font-family:'font8'!important}
-.font9{font-family:'font9'!important}
-.font10{font-family:'font10'!important}
-.font11{font-famiGreta_Arabic_Regularly:'font11'!important}
-.font12{font-family:'font12'!important}
-.font13{font-family:'font13'!important}
-.font14{font-family:'font14'!important}
-.font15{font-family:'font15'!important}
-.font16{font-family:'font16'!important}
-.font17{font-family:'font17'!important}
-.font17{font-family:'font18'!important}
-/*-------------------------*/
-@font-face{font-family:neo;src:url('admin/fonts/NeoSansArabic.eot');src:url('admin/fonts/NeoSansArabic.eot?#iefix') format('embedded-opentype'),url('admin/fonts/NeoSansArabic.woff') format('woff'),url('admin/fonts/NeoSansArabic.ttf') format('truetype'),url('admin/fonts/NeoSansArabic.otf') format('opentype'),url('fonts/NeoSansArabic.svg#NeoSansArabic-Regular') format('svg');font-weight:400;font-style:normal;font-stretch:normal;unicode-range:U+0020-FEFC}
-body{font-size:14px;line-height:1.42857143;color:rgb(60,75,123);background-color:rgb(255,255,255);font-family:neo;padding:0;margin:0}
-.col-xs-2{float:right}
-img{max-width:100%;vertical-align:middle;border:0}
-.center-col{width:calc(100% - 360px);overflow:hidden;float:right;text-align:center}
-#alba_sports_events{border:1px solid rgb(237,240,243)}
-.alba-live-table{display:block;padding:15px;overflow:hidden;float:right;width:100%;background-color:#fff;border:solid 1px rgba(75,158,114,0.27)}
-.alba-live-table .box-title{margin:0 0 15px;text-align:center;padding:5px 20px;overflow:hidden;display:block;border:0;border-radius:2px;position:relative;background:rgb(255,175,75);background:-moz-linear-gradient(top,rgb(255,175,75) 0%,rgb(255,146,10) 100%);background:-webkit-linear-gradient(top,#ffaf4b 0%,#ff920a 100%);background:linear-gradient(to bottom,rgb(255,175,75) 0%,rgb(255,146,10) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b',endColorstr='#ff920a',GradientType=0 )}
-.alba-live-table .box-title .title{font-size:18px;text-transform:uppercase;height:43px;z-index:99999;margin:0;font-weight:800;line-height:40px;color:#fff}
-.box-title .title .fa{width:1.3em;margin-left:.2em;font-size:15px}
-.alba_sports_events-event_item{text-align:center;width:100%;display:block;overflow:hidden;margin-bottom:10px;position:relative;border:1px solid rgb(228,228,228);padding:5px 0;background:rgb(255,255,255);background:-moz-linear-gradient(top,rgb(255,255,255) 0%,rgb(246,246,246) 47%,rgb(237,237,237) 100%);background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(47%,rgba(246,246,246,1)),color-stop(100%,rgba(237,237,237,1)));background:-webkit-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);background:-o-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);background:-ms-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);background:linear-gradient(to bottom,rgb(255,255,255) 0%,rgb(246,246,246) 47%,rgb(237,237,237) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#ededed',GradientType=0 )}
-.team-first{text-align:left}
-.team-first .alba-team_logo{display:inline-block;text-align:left;float:left;margin-right:10px}
-.alba_sports_events-team_title{font-size:18px;display:inline-block;color:rgb(92,92,92);font-weight:700;line-height:37px;letter-spacing:-.5px;font-family:neo}
-.alba-team_logo img{display:block;margin:0;width:40px;height:auto}
-.team-second{text-align:right}
-.team-second .alba-team_logo{display:inline-block;text-align:right;float:right;margin-left:10px}
-.event_title_wrapper{text-align:center;height:60px;padding:10px 0;width:140px}
-.event_status_inner_coming{display:inline-block;text-align:center;padding:0 10px;color:#00AFD8;font-weight:700;width:100px}
-.event_status_inner_live{display:block;float:right;width:100%}
-.event_status_inner_live span{background:rgb(255,0,0);font-size:13px;font-weight:700;color:rgb(255,255,255);border-radius:2px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;padding:2px 11px;display:block;top:3px;position:relative}
-.alba_sports_events-event_mask{position:absolute;top:0;right:0;bottom:0;left:0;display:none;z-index:8}
-.event_mask_inner{justify-content:center;align-items:center;height:100%;background:rgba(0,0,0,0.63);display:flex}
-.alba_sports_events-event_mask_inner_text{margin-top:0!important;background-color:RGB(255,46,46)!important;color:rgb(255,255,255)!important;padding:5px 30px;font-size:14px!important;line-height:22px;text-decoration:none;z-index:555}
-.alba_sports_events-event_item:hover .alba_sports_events-event_mask{display:block}
-.team-aria:after{content:"";right:0;height:30px;background:rgba(51,51,51,0.15);position:absolute;width:1px;top:18px}
-.event_inner .team-second::after{left:0!important;right:auto}
-.chanels-fix,.shampion{padding:15px;height:60px;text-align:center;color:rgb(90,90,90);width:180px}
-.event_inner .shampion{padding:12px}
-.shampion .fa{font-size:18px;vertical-align:middle;display:block}
-.chanels-fix .fa,.shampion .fa{color:#FF930C;padding-left:5px}
-.chanels-fix i.fa-television{font-size:11px;:700;margin-right:-3px;padding-left:3px}
-.team-aria{height:60px;padding:10px 15px;float:right;width:calc(50% - 70px);position:relative}
-.imgleague{height:35px;width:auto}
-.chanels-fix span{display:block;text-align:right;width:100%;padding:0 0;font-size:13px}
-.events-team_score{display:inline-block;color:rgb(147,147,147);font-size:25px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700}
-.vent_status_inner_ended{color:rgb(255,90,0);width:100%;float:right}
-.comming-soon{color:rgb(255,255,255);background-color:rgb(138,217,25);padding:4px 2px;border:1px solid transparent;border-radius:2px;line-height:15px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;margin:0 -2px}
-/*===========================*/
-@media screen and (max-width:980px){.chanels-fix,.shampion{padding:15px 10px;width:150px}.center-col{width:calc(100% - 300px)}}
-@media screen and (max-width:840px){.shampion{width:33.33%;text-align:center}.center-col{width:100%;margin-bottom:25px;position:relative;border-bottom:1px solid rgb(228,228,228)}.chanels-fix{right:33.33%!important;width:67%!important;padding-right:15px}.chanels-fix,.shampion{position:absolute;bottom:0;right:0;left:auto;height:auto;padding:7px 0}.shampion .fa{font-size:14px;vertical-align:middle;display:inline-block!important}.event_inner .shampion{padding:7px}.chanels-fix span{display:inline-block;text-align:center;padding:0 0;font-size:13px;width:50%;float:right}.shampion span img{display:none}.team-aria:after{display:none}.team-aria{height:auto;padding:10px 5px 5px!important}}
-@media screen and (max-width:564px){.team-first .alba-team_logo,.team-second .alba-team_logo{display:block;text-align:center;float:none;margin-right:0}.alba-team_logo img{display:inline-block}.alba_sports_events-team_title{font-size:14px;display:block;text-align:center;line-height:14px;padding:8px 0}.team-second{text-align:center;position:relative}.team-second .alba_sports_events-team_title{position:absolute;width:100%;top:50px;right:0}.event_title_wrapper{margin-top:14px}}
-@media screen and (max-width:480px){.event_inner .chanels-fix span:first-child{display:none!important}.event_inner .chanels-fix{right:50%!important;width:50%!important;padding-right:0!important}.event_inner .shampion{width:50%!important}.chanels-fix span{width:100%!important}}
-@media screen and (max-width:360px){.events-team_score{display:inline-block;color:rgb(192,124,22);font-size:22px;font-family:arial;line-height:20px}.alba_sports_events-team_title{font-size:12px}}
-.tab{display:block;clear:both;width:100%;overflow:hidden;margin-top:-15px;margin-bottom:15px}
-.tab .tablinks{width:50%;padding:0 10px;float:right;font-family:neo;border:0;color:#fff;font-size:17px;height:40px;line-height:11px;cursor:pointer;background:linear-gradient(to bottom,rgb(5,78,123) 0%,rgb(3,47,74) 100%)}
-.tablinks.active{color:#fff;background:linear-gradient(to bottom,rgb(205,22,22) 0%,rgb(193,24,24) 100%)}
-.tablinks:hover{opacity:0.8}
-#today{display:block}
-.tabcontent{display:none}
-#nomatch{text-align:center;width:100%;display:block;overflow:hidden;margin-bottom:10px;position:relative;border:1px solid #e4e4e4;background:#fff}
-.no-data__container{height:200px;display:flex;justify-content:center;align-items:center;flex-direction:column;background:#f0f2f5;color:#b4b4b4}
-.no-data__icon{font-size:39px;color:#b4b4b4}
+<!doctype html>
+<html lang="en">
+<body bgcolor="#000000">
+<body bgcolor="rgb(0,0,0)">
+<body bgcolor="black">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="generator" content="">  
+        <title>Home</title>
 
---></style>
+        <!-- manifest meta -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Favicons -->
+
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
+        <!-- bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+        <!-- swiper carousel css -->
+        <link rel="stylesheet" href="https://m.yacine-tv.com/assets/vendor/swiperjs-6.6.2/swiper-bundle.min.css">
+
+        <!-- style css for this template -->
+        <link href="https://m.yacine-tv.com/assets/css/style.css" rel="stylesheet" id="style">
+
+        <style>
+            *{
+                font-family: Tajawal;
+            }
+            body{direction:rtl}
+            .sidebar-wrap .sidebar {
+                float: right;
+            }
+            .nav {
+                padding-right: 0;
+            }
+            .sidebar-wrap .sidebar .nav .nav-item .nav-link>.arrow {
+                margin-left: 15px;
+            }
+            .sidebar-wrap .sidebar .nav .nav-item .nav-link>.icon {
+                margin-left: 15px;
+            }
+            .text-left{
+                text-align: left;
+            }
+            .text-right{
+                text-align: right;
+            }
+
+            .size-35 {
+                font-size: 50px;
+            }
+            .text-black{
+                color: black;
+            }
+
+            .text-gola{
+                color: #4b0be6;
+            }
+
+            .footer .nav .nav-item .nav-link  {
+                font-weight: 900;
+                color: black;
+            }
+            .btn-light {
+                color: #0e0e0e;
+                background: radial-gradient(ellipse at 30% 30%, #e4f3fc63 0%, #d0d9f608 50%, #570add2b 100%);
+            }
+            .sidebar-wrap .sidebar .nav .nav-item .nav-link.active {
+                background-color: rgb(255 255 255 / 5%);
+            }
+
+            .pt-10 {
+                padding-top: 6rem !important;
+            }
+            a{
+                color: #000000;
+            }
+            .card {
+                background-color: #ffffffab;
+            }
+
+            .div10{
+                width:10%;
+            }
+            .div8{
+                width:8%;
+            }
+            .div7{
+                width:7%;
+            }
+            .div15{
+                width:15%;
+            }
+
+            .div12{
+                width:12.5%;
+            }
+            .div30{
+                width:30%;
+            }
+            .div20{
+                width:20%;
+            }
+
+            .div5{
+                width:5%;
+            }
+            .div35{
+                width:35%;
+            }
+            .div25{
+                width:25%;
+            }
+            .div40{
+                width:40%;
+            }
+
+            .m0{
+                margin-right: 0px;
+                margin-left: 0px; 
+            }
+
+            .ml-5{
+                margin-left: 5px; 
+            }
+            .mr-5{
+                margin-right: 5px; 
+            }
+
+            h6, .h6 {
+                font-size: 0.9rem;
+            }
+            .myframe{
+                min-height: 400px;
+                width: 100%;
+            }
+
+            .list-group {
+                padding-right: 0
+            }
+
+            .avatar.avatar-25 {
+                line-height: 25px;
+                height: 25px;
+                width: 25px;
+            }
+            .pb-30 {
+                padding-bottom: 45px
+            }
+
+            .size-40 {
+                font-size: 40px;
+            }
+
+            .size-15 {
+                font-size: 15px;
+            }
+
+            .card .card-body {
+                padding: 3px;
+            }
+        </style>
+               <meta name=“robots”content=“noindex”>
+    </head>
+
+    <body class="body-scroll rtl" data-page="">
+
+        <!-- loader 
+        <div class="container-fluid loader-wrap">
+            <div class="row h-100">
+                <div class="col-10 col-md-6 col-lg-5 col-xl-3 mx-auto text-center align-self-center">
+                    <div class="logo-wallet">
+                        <div class="wallet-bottom">
+                        </div>
+                        <div class="wallet-cards"></div>
+                        <div class="wallet-top">
+                        </div>
+                    </div>
+                    <p class="mt-4"><span class="text-secondary">Golato TV</span><br><strong>Please
+                            wait...</strong></p>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- Sidebar main menu -->
+        <div class="sidebar-wrap  sidebar-overlay">
+            <!-- Add pushcontent or fullmenu instead overlay -->
+            <div class="closemenu text-muted">Close Menu</div>
+            <div class="sidebar ">
+                <!-- user information -->
+                <div class="row my-3">
+                    <div class="col-12 profile-sidebar">
+                        <div class="clearfix"></div>
+                        <div class="circle small one"></div>
+                        <div class="circle small two"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             viewBox="0 0 194.287 141.794" class="menubg">
+                        <defs>
+                        <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
+                                        gradientUnits="objectBoundingBox">
+                        <stop offset="0" stop-color="#09b2fd" />
+                        <stop offset="1" stop-color="#6b00e5" />
+                        </linearGradient>
+                        </defs>
+                        <path id="menubg"
+                              d="M672.935,207.064c-19.639,1.079-25.462-3.121-41.258,10.881s-24.433,41.037-49.5,34.15-14.406-16.743-50.307-29.667-32.464-19.812-16.308-41.711S500.472,130.777,531.872,117s63.631,21.369,93.913,15.363,37.084-25.959,56.686-19.794,4.27,32.859,6.213,44.729,9.5,16.186,9.5,26.113S692.573,205.985,672.935,207.064Z"
+                              transform="translate(-503.892 -111.404)" fill="url(#linear-gradient)" />
+                        </svg>
+
+                        <div class="row mt-3">
+                            <div class="col-auto">
+                                <figure class="avatar avatar-80 rounded-20 p-1 bg-white shadow-sm">
+                                    <img src="https://imgs1.e-droid.net/srv/imgs/gen/1875201_ico.png?ts=1646533098" alt="" class="rounded-18">
+                                </figure>
+                            </div>
+                            <div class="col px-0 align-self-center">
+                                <h5 class="mb-2">MOSCA TV</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- user emnu navigation -->
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav nav-pills">
+                             <li class="nav-item">
+                                <a class="nav-link active" href="#" tabindex="-1">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-smartwatch"></i></div>
+                                    <div class="col">مباريات اليوم</div>
+                                    <div class="arrow"><i class="bi bi-chevron-left"></i></div>
+                                </a>
+                            </li>
+
+                        
+                         
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" tabindex="-1">
+                                    <div class="avatar avatar-40 icon"><i class="bi bi-tv"></i></div>
+                                    <div class="col">القنوات الناقلة</div>
+                                    <div class="arrow"><i class="bi bi-chevron-left"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar main menu ends -->
+
+        <!-- Begin page -->
+        <main class="h-100 ">
+
+            <!-- Header -->
+            <header class="header position-fixed">
+                <div class="row">
+                    <div class="col-auto">
+                        <a href="javascript:void(0)" target="_self" class="btn btn-light  btn-44 menu-btn">
+                            <i class="bi bi-list"></i>
+                        </a>
+                    </div>
+                    <div class="col text-center">
+                        <div class="logo-small">
+                            <img src="https://imgs1.e-droid.net/srv/imgs/gen/1875201_ico.png?ts=1646533098" alt="" />
+                            <h5><span class="text-secondary fw-light">MOSCA</span><br />TV</h5>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <a href="#" target="_self" class="btn btn-light  btn-44">
+                            <i class="bi bi-house-door"></i>
+                            <span class="count-indicator"></span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <!-- Header ends -->
+
+            <!-- main page content -->
+            <div class="main-container container position-fixed1 pt-10 pb-30 "><div class="accordion accordion-flush shadow-sm mb-4" id="accordionFlushExample" style="padding-bottom: 30px">
+
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7709">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7709" aria-expanded="false" aria-controls="flush-collapse7709">
+
+                        <div class="row " style="width:100%">
+
+					<div class="div30 col align-self-center text-right">
+					
+					
+   <h6 class="fs-7">
+                             							 قاديش                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1599896923.png" alt="" class="w-100">
+                                </figure>
+                            </div>
 
 
 
+                            <div class="div20 col-auto align-self-center text-center">
 
-<div id="Today" class="tabcontent acti">
-<div class="boxGadwlTare5">
-<div class="r">
-الأحد 06 / 03 / 2022 </div>
-<div class="l">بتوقيت جهازك</div>
-</div>
-<div class="albaflex">
-<a class="AlbaSposrTable " rel="2022/03/06 16:00">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="واتفورد" title="واتفورد" src="https://www.as-goal.com/wp-content/uploads/2021/01/واتفورد-1.png" width="62" height="62" /> <span>واتفورد</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49195" data-start="2022-03-06T16:00:00+00:00" data-gameends="2022-03-06T18:30:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="ارسنال" title="ارسنال" src="https://www.as-goal.com/wp-content/uploads/2020/11/eng_arsenal-e1606399636843.png" width="62" height="62" /><span>ارسنال</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الانجليزي</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-بي ان بريميوم 1 </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-عامر الخوذيري </div>
-</div>
-</a>
-<a href="https://as-goal.site/channel002/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 16:30">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="ماينز 05" title="ماينز 05" src="https://www.as-goal.com/wp-content/uploads/2020/11/ger_mainz_05-e1606400500810.png" width="62" height="62" /> <span>ماينز 05</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49196" data-start="2022-03-06T16:30:00+00:00" data-gameends="2022-03-06T19:00:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="بروسيا دورتموند" title="بروسيا دورتموند" src="https://www.as-goal.com/wp-content/uploads/2020/11/ger_borussia_dortmund-e1606400345424.png" width="62" height="62" /><span>بروسيا دورتموند</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الالماني</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-قناة اجنبية </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-غير معروف </div>
-</div>
-</a>
-<a href="https://yallahd.live/elche-vs-barcelona/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 17:15">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="التشي" title="التشي" src="https://www.as-goal.com/wp-content/uploads/2020/12/تنزيل.png" width="62" height="62" /> <span>التشي</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49197" data-start="2022-03-06T17:15:00+00:00" data-gameends="2022-03-06T19:45:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="برشلونة" title="برشلونة" src="https://www.as-goal.com/wp-content/uploads/2020/11/spa_barcelona-e1606400165474.png" width="62" height="62" /><span>برشلونة</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الاسباني</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-بي ان سبورت 1 </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-حفيظ دراجي </div>
-</div>
-</a>
-<a class="AlbaSposrTable " rel="2022/03/06 18:30">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="مانشستر سيتي" title="مانشستر سيتي" src="https://www.as-goal.com/wp-content/uploads/2020/11/eng_manchester_city_v2-e1606399729910.png" width="62" height="62" /> <span>مانشستر سيتي</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49198" data-start="2022-03-06T18:30:00+00:00" data-gameends="2022-03-06T21:00:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="مانشستر يونايتد" title="مانشستر يونايتد" src="https://www.as-goal.com/wp-content/uploads/2020/11/eng_manchester_united-e1606399721229.png" width="62" height="62" /><span>مانشستر يونايتد</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الانجليزي</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-بي ان بريميوم 1 </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-عصام الشوالي </div>
-</div>
-</a>
-<a href="https://as-goal.site/channel003/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 19:00">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="يوفنتوس" title="يوفنتوس" src="https://www.as-goal.com/wp-content/uploads/2020/11/يوفنتوس-1-e1606400677278.png" width="62" height="62" /> <span>يوفنتوس</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49199" data-start="2022-03-06T19:00:00+00:00" data-gameends="2022-03-06T21:30:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="سبيزيا" title="سبيزيا" src="https://www.as-goal.com/wp-content/uploads/2020/11/ita_spezia-e1606399998460.png" width="62" height="62" /><span>سبيزيا</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الايطالي</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-قناة اجنبية </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-غير معروف </div>
-</div>
-</a>
-<a href="https://as-goal.site/channel004/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 19:30">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="سيلتا فيغو" title="سيلتا فيغو" src="https://www.as-goal.com/wp-content/uploads/2020/11/spa_celta_de_vigo-e1606400239340.png" width="62" height="62" /> <span>سيلتا فيغو</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49200" data-start="2022-03-06T19:30:00+00:00" data-gameends="2022-03-06T22:00:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="ريال مايوركا" title="ريال مايوركا" src="https://www.as-goal.com/wp-content/uploads/2021/09/2000333-1.png" width="62" height="62" /><span>ريال مايوركا</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الاسباني</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-بي ان سبورت 1 </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-عادل خلو </div>
-</div>
-</a>
-<a href="https://as-goal.site/channel005/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 21:45">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="نابولي" title="نابولي" src="https://www.as-goal.com/wp-content/uploads/2020/11/ita_napoli-e1606400089126.png" width="62" height="62" /> <span>نابولي</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49201" data-start="2022-03-06T21:45:00+00:00" data-gameends="2022-03-07T00:15:00+00:00"></div>
+                                <p class="fw-bold fs-7">
 
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="ميلان" title="ميلان" src="https://www.as-goal.com/wp-content/uploads/2020/12/ميلان-1.png" width="62" height="62" /><span>ميلان</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الايطالي</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-قناة اجنبية </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-غير معروف </div>
-</div>
-</a>
-<a href="https://as-goal.site/channel006/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 21:45">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="مارسيليا" title="مارسيليا" src="https://www.as-goal.com/wp-content/uploads/2020/11/fra_olympique_marseille-e1606401291464.png" width="62" height="62" /> <span>مارسيليا</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        13:00                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1611706644.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                رايو فاليكانو                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7709" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                   <a href="#">beIN Sports HD 1</a>
+                    </div>
+           </div>
+            </div>             
+                <div id="flush-collapse7713" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+         
+         <a href="#">  SuperSport Football HD </a>   
+                    </div>
+                </div>
+            </div>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7716">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7716" aria-expanded="false" aria-controls="flush-collapse7716">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  رين                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1564444945.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        14:00                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1570198515.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                أنجيه                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7716" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                  <a href="#">    beIN Sports HD 2</a> 
+                    </div>
+                </div>
+            </div>
+			<br><Br>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7710">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7710" aria-expanded="false" aria-controls="flush-collapse7710">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  إلتشي                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1603455181.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        15:15                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1557221057.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                برشلونة                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7710" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                     <a href="#"> beIN Sports HD 1 </a> 
+                    </div>
+                </div>
+            </div>
+			<br><br>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7721">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7721" aria-expanded="false" aria-controls="flush-collapse7721">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  فنربخشة                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1564441995.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        16:00                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1568920933.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                طرابزون سبور                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+				
+				
+                <div id="flush-collapse7721" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                    <a href="#">  beIN Sports Turkey 1 HD   </a>
+                    </div>
+                </div>
+            </div>
+			<br><br>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7717">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7717" aria-expanded="false" aria-controls="flush-collapse7717">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  ليل                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1557010340.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        16:05                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1631314347.jpg" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                كليرمون فوت                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7717" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+               <a href="#"> beIN Sports HD 2 </a>
+                    </div>
+                </div>
+            </div>
+			
+			<br><br>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7708">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7708" aria-expanded="false" aria-controls="flush-collapse7708">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  مانشستر سيتي                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1556300905.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        16:30                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1556300891.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                مانشستر يونايتد                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7708" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                  <a href="#">beIN Sports 1 HD Premium</a> 
+                    </div>
+                </div>
+            </div>
+                  <br><br>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7718">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7718" aria-expanded="false" aria-controls="flush-collapse7718">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  مرسيليا                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1564444624.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        19:45                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1565303626.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                موناكو                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7718" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                   <a href="#"> beIN Sports HD 2</a>   
+                    </div>
+                </div>
+            </div>
+			<br><br>
+                        <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading7712">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7712" aria-expanded="false" aria-controls="flush-collapse7712">
+
+                        <div class="row " style="width:100%">
+
+
+                            <div class="div30 col align-self-center text-right">
+
+                                <h6 class="fs-7">
+                                  ريال بيتيس                                </h6>
+
+                            </div>
+
+                      
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1558221913.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+
+
+                            <div class="div20 col-auto align-self-center text-center">
+
+                                <p class="fw-bold fs-7">
+
+                                </p><div class="score font-weight-bold mb-0">
+                                    <div class="fw-bold">
+                                        20:00                                                     
+                                    </div>
+
+
+                                </div>
+
+                                
+                               
+
+                            </div>
+
+                        
+                            <div class="div10 col-auto align-self-center ">
+                                <figure class="avatar avatar-25 rounded-15 ">
+                                    <img src="https://web-api.golato.net/uploads/team/1564172667.png" alt="" class="w-100">
+                                </figure>
+                            </div>
+
+                            <div class="div30 col align-self-center  text-left">
+
+                                <h6 class="fs-7">
+                                أتلتيكو مدريد                                </h6>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </button>
+                </h2>
+                <div id="flush-collapse7712" class="accordion-collapse collapse " aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample" style="">
+                    <div class="accordion-body text-secondary">
+                 <a href="#">beIN Sports HD 1</a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
 </div> </div>
-<div class="date stay" id="49202" data-start="2022-03-06T21:45:00+00:00" data-gameends="2022-03-07T00:15:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="موناكو" title="موناكو" src="https://www.as-goal.com/wp-content/uploads/2020/11/موناكو-1.png" width="62" height="62" /><span>موناكو</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الفرنسي</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-بي ان سبورت 2 </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-جواد بدة </div>
-</div>
-</a>
-<a href="https://as-goal.site/channel007/" target="_blank" class="AlbaSposrTable " rel="2022/03/06 22:00">
-<div class="AlbaTableTop">
-<div class="AlbaTableFteam">
-<img alt="ريال بيتيس" title="ريال بيتيس" src="https://www.as-goal.com/wp-content/uploads/2020/12/ريال-بيتيس.png" width="62" height="62" /> <span>ريال بيتيس</span></div>
-<div class="AlbaTableTime">
-<span class="bouton">جاري التحميل</span>
-<div>
-<div class="AlbaTableMtime">
-<div class='time_ar fc_time'></div>
-<div class='matchResult'>
-<span id="hdaf1">0</span>
--
-<span id="hdaf2">0</span>
-</div> </div>
-<div class="date stay" id="49203" data-start="2022-03-06T22:00:00+00:00" data-gameends="2022-03-07T00:30:00+00:00"></div>
-</div>
-</div>
-<div class="AlbaTableSteam"><img alt="اتليتكو مدريد" title="اتليتكو مدريد" src="https://www.as-goal.com/wp-content/uploads/2020/11/spa_atletico_madrid-e1606400156162.png" width="62" height="62" /><span>اتليتكو مدريد</span></div>
-</div>
-<div class="AlbaTableMinfo">
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trophy" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-trophy fa-w-18">
-<path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" class=""></path>
-</svg>
-الدوري الاسباني</div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tv-retro" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tv-retro fa-w-16">
-<path fill="currentColor" d="M464 96H338.8l35.7-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 94.2 182.8 9.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L173.2 96H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h16v32h48l21.3-32h245.3l21.3 32h48v-32h16c26.5 0 48-21.5 48-48V144c.1-26.5-21.4-48-47.9-48zm-72 312s0 8-168 8c-152 0-152-8-152-8s-8 0-8-120 8-120 8-120 0-8 152-8c168 0 168 8 168 8s8 0 8 120-8 120-8 120zm72-100c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v8z" class=""></path>
-</svg>
-بي ان بريميوم 1 </div>
-<div class="cols">
-<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="microphone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-microphone fa-w-11">
-<path fill="currentColor" d="M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z" class=""></path>
-</svg>
-علي محمد علي </div>
-</div>
-</a>
-</div>
-</div>
+            <!-- main page content ends -->
+
+
+            <footer class="footer">  
+                <div class="container">
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    <i class="nav-icon bi bi-house-door"></i>
+                                    <span class="nav-text">الرئيسية</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    <i class="nav-icon bi bi-smartwatch"></i>
+                                    <span class="nav-text">مباريات</span>
+                                </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </footer>
+
+        </main>
+        <!-- Page ends-->
+
+
+        <!-- Required jquery and libraries -->
+        <script src="https://m.golato.tv/assets/js/jquery-3.3.1.min.js"></script>
+        <script src="https://m.golato.tv/assets/js/popper.min.js"></script>
+        <script src="https://m.golato.tv/assets/vendor/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Customized jquery file  -->
+        <script src="https://m.golato.tv/assets/js/main.js?v=1.0"></script>
+        <script src="https://m.golato.tv/assets/js/color-scheme.js"></script>
+
+        <!-- PWA app service registration and works -->
+
+
+        <!-- Progress circle js script -->
+        <script src="https://m.golato.tv/assets/vendor/progressbar-js/progressbar.min.js"></script>
+
+        <!-- swiper js script -->
+        <script src="https://m.golato.tv/assets/vendor/swiperjs-6.6.2/swiper-bundle.min.js"></script>
+
+        <!-- page level custom script -->
+        <script src="assets/js/app.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-208715298-1"></script>
+<script>
+    
+      deleteAllCookies();
+    function deleteAllCookies() {
+ var c = document.cookie.split("; ");
+ for (i in c) 
+  document.cookie =/^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT";    
+}
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+            dataLayer.push(arguments);
+            }
+    gtag('js', new Date());
+            gtag('config', 'UA-208715298-1');
+            setInterval(function () {
+            window.dataLayer = window.dataLayer || [];
+                    function gtag() {
+                    dataLayer.push(arguments);
+                    }
+            gtag('js', new Date());
+                    gtag('config', 'UA-208715298-1');
+            }, 60000);        </script>
+
+    </body>
+
+</html>
